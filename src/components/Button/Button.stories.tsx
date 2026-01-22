@@ -2,6 +2,7 @@ import { Button } from '.';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
+  title: 'Components/Forms/Button',
   component: Button,
   decorators: [
     Story => (

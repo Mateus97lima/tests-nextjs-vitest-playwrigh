@@ -22,9 +22,9 @@ const SIZE_LG_CLASSES =
 describe('<Button />', () => {
   describe('props padrão em jsx', () => {
     test('deve renderizar o botão com props padrão', () => {
-      render(<Button>Enviar formulário</Button>)
+      render(<Button>Enviar formulário</Button>) // Renderiza o componente Button que criei  com o texto Envia Formulário//
 
-      const button = screen.getByRole('button', {
+      const button = screen.getByRole('button', {  // getByRole o melhor //
         name: /enviar formulário/i,
       })
 
@@ -98,7 +98,7 @@ describe('<Button />', () => {
         </Button>,
       )
 
-      const button = screen.getByTestId('botao')
+      const button = screen.getByTestId('botao')  // getByTestId busca o elemento com o atributo data-testid igual a "botao usa no ultimo caso//"
       expect(button).toHaveClass(SIZE_SM_CLASSES)
     })
 
@@ -134,6 +134,7 @@ describe('<Button />', () => {
       })
 
       expect(button).toHaveClass(DISABLED_CLASSES)
+      expect(button).toBeDisabled()
     })
   })
 })
