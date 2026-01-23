@@ -25,6 +25,7 @@ export function InputText({
     'read-only:bg-slate-100',
     isInvalid && 'ring-red-500 focus:ring-red-700 placeholder-red-200',
     !isInvalid && 'ring-slate-400 focus:ring-blue-600 placeholder-slate-300',
+    
     props.className,
   );
 

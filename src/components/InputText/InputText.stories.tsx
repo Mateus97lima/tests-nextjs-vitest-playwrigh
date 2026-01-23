@@ -15,8 +15,8 @@ const meta: Meta<typeof InputText> = {
   argTypes: {
     type: {
       control: 'select',
-      options: ['text', 'password', 'email', 'tel', 'url', 'search'],
-      description: 'Esse é o tipo do input',
+      options: ['text', 'password', 'email', 'tel', 'url', 'search', ],
+      description: 'Escolha o tipo do input',
     },
     labelText: {
       control: 'text',
@@ -32,7 +32,7 @@ const meta: Meta<typeof InputText> = {
     },
     required: {
       control: 'boolean',
-      description: 'O campo é requerido',
+      description: 'O campo é obrigatório',
     },
     disabled: {
       control: 'boolean',
