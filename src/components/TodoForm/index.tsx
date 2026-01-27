@@ -13,7 +13,7 @@ export type TodoFormProps = {
 
 export function TodoForm({ action }: TodoFormProps) {
  const [pending, startTransition] = useTransition();
- const [inputErro, setInputError] = useState('')
+ const [inputErro, setInputError] = useState('');
  const ref= useRef<HTMLInputElement>(null)
 
  function handleCreateTodo(e: React.FormEvent<HTMLFormElement>) {
