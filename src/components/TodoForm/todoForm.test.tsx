@@ -44,7 +44,7 @@ describe('<TodoForm /> (integration)', () => {
   })
 
   test('deve desativa o botão enquanto envia action', async () => {
-      const {btn, input,} = renderForm({delay: 5}); // adiciona um delay para simular o envio//
+      const {btn, input,} = renderForm({delay: 10}); // adiciona um delay para simular o envio//
       await user.type(input, 'New Todo');
       await user.click(btn);
 
@@ -53,7 +53,7 @@ describe('<TodoForm /> (integration)', () => {
   })
 
   test('deve desativa o input enquanto envia action', async () => {
-    const {btn, input,} = renderForm({delay: 10}); // adiciona um delay para simular o envio//
+    const {btn, input,} = renderForm({delay: 12}); // adiciona um delay para simular o envio//
     await user.type(input, 'New Todo');
     await user.click(btn);
 
