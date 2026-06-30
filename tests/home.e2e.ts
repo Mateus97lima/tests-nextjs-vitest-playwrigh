@@ -24,7 +24,7 @@ test.beforeEach(async ({page}) => {
 const {deleteTodoNoWhere} = await makeTestTodoRepository();
 await deleteTodoNoWhere();
 
-await page.goto(HOME_URL);
+await page.goto(HOME_URL); // Navega para a página inicial antes de cada teste
 
 });
 
@@ -94,6 +94,14 @@ test.describe('< Home /> (E2E)', () => {
 
       const todo2Item = page.getByRole('listitem').filter({hasText: todo2})
       await expect(todo2Item).toBeVisible()
+    });
+    test('deve desativar o botão enquanto cria o TODO ', async({page}) => {
+    const {input,btn} = getAll(page)
+
+    await input.fill(NEW_TODO_TEXT) //fill e o mesmo que digitar no input
+    await btn.click();
+
+    await expect(getBtnBusy(page)).toBeVisible();
     })
   })
 });
