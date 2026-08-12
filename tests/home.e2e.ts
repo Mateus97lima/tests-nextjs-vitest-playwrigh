@@ -102,6 +102,7 @@ test.describe('< Home /> (E2E)', () => {
     await btn.click();
 
     await expect(getBtnBusy(page)).toBeVisible();
+    await expect(getBtnBusy(page)).toBeDisabled();
     })
   })
 });
